@@ -19,6 +19,13 @@ public class HomeWork02
  *
 * */
 
-
+        User Ivanov = new User();
+        UserAccount acc1 = new UserAccount();
+        acc1.owner = Ivanov.lastName + Ivanov.firstName;
+        acc1.number = "40817810570000123456";
+        acc1.put(5000);
+        acc1.withdrawal(350);
+        acc1.checkTransaction();
+        acc1.report();
     }
 }
