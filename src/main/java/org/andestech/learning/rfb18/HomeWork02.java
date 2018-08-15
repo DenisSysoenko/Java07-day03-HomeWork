@@ -20,5 +20,11 @@ public class HomeWork02
 * */
 
 
+        User user = new User();
+        UserAccount account = user.createAccount();
+        account.withdrawal();
+        account.put(100);
+        account.checkTransaction();
+        account.report();
     }
 }
