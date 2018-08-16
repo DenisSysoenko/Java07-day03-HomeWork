@@ -11,41 +11,37 @@ class UserAccount implements IAccount {
     private int userID;
     private String accountOwner;
     private int currentCountRub;
-    private int currentCountKopek;
+// TODO: Раздвоение суммы на целый и дробные (рубли и копейки)
+//  private int currentCountKopek;
     private int trnscID;
     String [] trnscHistory = new String [1000];
-    
+
     UserAccount(String accountOwner, int firstPut, int userID) {
         this.accountOwner = accountOwner;
         this.currentCountRub = firstPut;
         this.userID = userID;
         trnscID = userID*1000;
-        
+
     }
-    
+
     @Override
     public void withdrawal(int amount) {
         String operStatus = "Неудачно";
         trnscID++;
-        if(amount > 0) {
-            if((currentCountRub - amount) > 0){
-                currentCountRub = currentCountRub - amount;
-                operStatus = "Успешно";
-                System.out.println("Операция снятия прошла успешно. Остаток средств: " + currentCountRub + " руб.");
-            } else {
-                System.out.println("Совершение операции невозможно: на счете недостаточно средств");
-            }   
+        if (checkTransaction("withdrawal", amount)) {
+            operStatus = "Успешно";
+            System.out.println("Операция снятия прошла успешно. Остаток средств: " + currentCountRub + " руб.");
         } else {
-            System.out.append("Совершение операции невозможно: указана невалидная сумма!");
+            System.out.append("Совершение операции невозможно: указана невалидная сумма или на счете недостаточно средств");
         }
-        trnscHistory [(trnscID - userID*1000)] = (trnscID + "\t" + "Снятие" + "\t" + amount + " RUB" + "\t" + operStatus);
+        trnscHistory[(trnscID - userID * 1000)] = (trnscID + "\t" + "Снятие" + "\t" + amount + " RUB" + "\t" + operStatus);
     }
- 
+
     @Override
     public void put(int amount) {
         String operStatus = "Неудачно";
         trnscID++;
-        if(amount > 0) {
+        if (checkTransaction("put", amount)) {
             currentCountRub = currentCountRub + amount;
             operStatus = "Успешно";
             System.out.println("Операция внесения прошла успешно. Внесено: " + amount + " руб.");
@@ -54,12 +50,19 @@ class UserAccount implements IAccount {
         }
         trnscHistory [(trnscID - userID*1000)] = (trnscID + "\t" + "Снятие" + "\t" + amount + " RUB" + "\t" + operStatus);
     }
-    
+
     @Override
-    public String checkTransaction(int trnscID) { 
-        return (trnscHistory[(trnscID - userID*1000)]); 
+    public boolean checkTransaction(String trnscType, int amount) {
+        boolean trnscPassed = false;
+        if (amount <= 0 ) {
+            return trnscPassed;
+        } else if (trnscType == "withdrawal" && amount > currentCountRub) {
+            return trnscPassed;
+        }
+        trnscPassed = true;
+        return trnscPassed;
     }
-   
+
     @Override
     public void report() {
         System.out.println();
@@ -73,10 +76,10 @@ class UserAccount implements IAccount {
             System.out.println("..................................................");
         }
     }
-    
+
     @Override
     public void report(int trnscID) {
-            System.out.println(trnscHistory[trnscID - userID*1000]);
-        }
+        System.out.println(trnscHistory[trnscID - userID*1000]);
     }
+}
 
