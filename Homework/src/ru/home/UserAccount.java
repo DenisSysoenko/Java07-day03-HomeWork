@@ -2,15 +2,15 @@ package ru.home;
 
 public class UserAccount implements IAccount {
 
-    Integer totalSum;
-    Integer sumforlimit;
+    int totalSum;
+    int sumforlimit;
     @Override
-    public void withdrawal(Integer w) {
+    public void withdrawal(int w) {
         System.out.println("Сняли со счета" + w);
     }
 
     @Override
-    public void checkTransaction(Integer sumforlimit, Integer oursum) {
+    public void checkTransaction(int sumforlimit, int oursum) {
         this.sumforlimit = sumforlimit;
         if(oursum < this.sumforlimit){
             System.out.println("Transaction OK");
@@ -20,7 +20,7 @@ public class UserAccount implements IAccount {
     }
 
     @Override
-    public void put(Integer inMoney) {
+    public void put(int inMoney) {
         this.totalSum = inMoney;
         System.out.println("Положили на счет " + inMoney + " руб");
     }
