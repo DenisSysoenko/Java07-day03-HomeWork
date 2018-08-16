@@ -1,11 +1,8 @@
 package org.andestech.learning.rfb18;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-import static junit.framework.Assert.assertTrue;
-//import static org.junit.Assert.assertTrue;
-//
-//import org.junit.Test;
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
