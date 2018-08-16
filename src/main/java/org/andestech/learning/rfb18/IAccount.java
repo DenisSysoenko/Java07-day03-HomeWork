@@ -7,7 +7,7 @@ package org.andestech.learning.rfb18;
 
 interface IAccount {
     void withdrawal(int intrCountRub);
-    String checkTransaction(int trnscID);
+    boolean checkTransaction(String trnscType, int amount);
     void put(int amount);
     void report(int trnscID);
     void report();
