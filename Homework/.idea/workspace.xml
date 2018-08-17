@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dc8c1b2e-09e5-41e8-8f6a-84eb632048b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Homework/ru/home/IAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/ru/home/IAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Homework/ru/home/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/ru/home/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Homework/ru/home/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/ru/home/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Homework/ru/home/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/ru/home/UserAccount.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Java07-day03-HomeWork" beforeDir="false" afterPath="$PROJECT_DIR$/../Java07-day03-HomeWork" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/home/UserAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+            <state relative-caret-position="156">
+              <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
               <folding>
                 <element signature="e#479#480#0" expanded="true" />
                 <element signature="e#508#509#0" expanded="true" />
@@ -175,7 +171,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534478331129" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534478927038" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -224,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1534477170470</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dz">
+      <created>1534478222338</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1534478222338</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dz">
+      <created>1534478401697</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1534478401697</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -300,8 +310,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/home/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="44" column="28" lean-forward="true" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
+        <state relative-caret-position="156">
+          <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
           <folding>
             <element signature="e#479#480#0" expanded="true" />
             <element signature="e#508#509#0" expanded="true" />
