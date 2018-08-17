@@ -3,13 +3,16 @@ package ru.home;
 public class Main {
 
     public static void main(String[] args) {
+
         User user = new User();
-        UserAccount account = user.createAccount();
+        user.createUser("Иван","Иванов");
+        UserAccount userAccount = new UserAccount();
+        userAccount.createAccount("Иван", "Иванов", 5000);
       //
-        account.put(100);
-        account.checkTransaction(500, 1000);
-        account.withdrawal(250);
-        account.report();
+        userAccount.put(100, 5000);
+        userAccount.checkTransaction(500, 100);
+        userAccount.withdrawal(250);
+        userAccount.report();
     }
         /*
     * TODO:

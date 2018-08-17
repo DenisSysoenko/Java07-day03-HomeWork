@@ -2,10 +2,28 @@ package ru.home;
 
 public class User {
 
-    public UserAccount createAccount() {
-        System.out.println("Счет создан");
-        return new UserAccount();
+    private String name;
+    private String secondName;
+
+    public User createUser(String name, String secondName){
+        System.out.println("Пользователь" + " " + name + " " + secondName + " " + "создан");
+        return new User();
+
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
 }
